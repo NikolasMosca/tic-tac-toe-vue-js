@@ -7,6 +7,7 @@ The player can play against an AI that I have made personally.
 
 It's not impossible to win but it's hard :) 
 
+For playing with it click this [link](https://frosty-albattani-20d20c.netlify.com/)!
 
 ## Project setup
 ```

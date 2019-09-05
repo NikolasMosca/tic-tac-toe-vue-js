@@ -42,14 +42,14 @@ export default {
     box-sizing: border-box;
   }
   body {
-    background: url(./assets/background.jpg) center no-repeat;
+    background: black;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    background: black;
+    background: url(./assets/background.jpg) center no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
