@@ -11,6 +11,10 @@ It's not impossible to win but it's a bit hard :) Enjoy!
 
 ---
 
+![](./public/readme-cover.JPG)
+
+---
+
 ## Project setup
 ```
 npm install
