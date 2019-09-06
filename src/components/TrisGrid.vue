@@ -172,13 +172,26 @@
                   avaiable.push(item)
                 }
               })
-              if(!decision) {
+              if(!decision && avaiable.length > 0) {
                 this.setAIDecision(avaiable[this.getRand(0, avaiable.length)])
                 decision = true;
                 return;
               }
             }
           })
+
+          //If it's not exists a possibility for win do random choice
+          let avaiable = [];
+          for(var index in avaiablePositions) {
+            if(avaiablePositions[index]) {
+              avaiable.push(index)
+            }
+          }
+          if(!decision && avaiable.length > 0) {
+            this.setAIDecision(avaiable[this.getRand(0, avaiable.length)])
+            decision = true;
+            return;
+          }
         }
       },
 
@@ -225,7 +238,7 @@
         for(var index in this.grid) {
           if(!this.grid[index]) avaiablePositions++
         }
-        if(avaiablePositions === 0) {
+        if(avaiablePositions === 0 && this.winLines.length === 0) {
           setTimeout(this.resetGame, 2000);
         }
       },
