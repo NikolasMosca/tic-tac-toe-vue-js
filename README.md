@@ -1,13 +1,15 @@
-# tic-tac-toe-vue-js
+# Tic Tac Toe in VueJS
 This is a simple tris game.
 
 The project using VueJS.
 
 The player can play against an AI that I have made personally.
 
-It's not impossible to win but it's hard :) 
+It's not impossible to win but it's a bit hard :) Enjoy!
 
-For playing with it click this [link](https://frosty-albattani-20d20c.netlify.com/)!
+## For playing with it click this [link](https://frosty-albattani-20d20c.netlify.com/)!
+
+---
 
 ## Project setup
 ```
@@ -24,15 +26,7 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
