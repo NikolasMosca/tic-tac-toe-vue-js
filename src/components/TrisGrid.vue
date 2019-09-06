@@ -162,6 +162,23 @@
               }
             }
           })
+
+          //Manage danger level 1, minor decisions
+          this.possibleCombinations.map((combination, index) => {
+            if(dangerValutation[index] === 1 && !decision) {
+              let avaiable = [];
+              combination.map(item => {
+                if(avaiablePositions[item]) {
+                  avaiable.push(item)
+                }
+              })
+              if(!decision) {
+                this.setAIDecision(avaiable[this.getRand(0, avaiable.length)])
+                decision = true;
+                return;
+              }
+            }
+          })
         }
       },
 
