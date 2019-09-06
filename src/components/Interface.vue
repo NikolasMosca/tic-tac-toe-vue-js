@@ -24,6 +24,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        color: white;
         font: {
             family: sans-serif;
             size: 100px;
