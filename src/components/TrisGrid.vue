@@ -370,7 +370,7 @@
 
         &.win {
           div {
-            background: green;
+            background: green !important;
           }
         }
 
@@ -405,7 +405,7 @@
         }
 
         &.win {
-          border-color: green;
+          border-color: green !important;
         }
       }
       
