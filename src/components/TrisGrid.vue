@@ -412,7 +412,7 @@
     }
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px), screen and (max-height: 600px) {
     .X {
       div {
         height: 7px !important;

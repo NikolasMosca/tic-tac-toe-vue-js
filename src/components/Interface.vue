@@ -3,6 +3,16 @@
     <div>
         <strong>X</strong> {{xScore}}
     </div>
+    <github-button 
+        href="https://github.com/NikolasMosca/tic-tac-toe-vue-js" 
+        data-icon="octicon-star" 
+        data-size="large" 
+        data-show-count="false" 
+        aria-label="Star NikolasMosca/tic-tac-toe-vue-js on GitHub"
+        class="github-button"
+    >
+        Star
+    </github-button>
     <div>
         <strong>O</strong> {{oScore}}
     </div>
@@ -10,13 +20,17 @@
 </template>
 
 <script>
-  export default {
-    name: 'Interface',
-    props: {
-        xScore: Number,
-        oScore: Number
+    import GithubButton from 'vue-github-button'
+    export default {
+        name: 'Interface',
+        props: {
+            xScore: Number,
+            oScore: Number
+        },
+        components: {
+            GithubButton
+        },
     }
-  }
 </script>
 
 <style lang="scss" scoped>
@@ -28,6 +42,15 @@
         font: {
             family: sans-serif;
             size: 100px;
+        }
+
+        .github-button {
+            span {
+                .widget {
+                    display: block !important;
+                }
+            }
+            
         }
     }
 
@@ -41,6 +64,12 @@
     @media screen and (orientation:landscape) {
         .interface {
             height: 80%;
+        }
+    }
+
+    @media screen and (max-height: 600px) {
+        .interface {
+            font-size: 50px;
         }
     }
 </style>
