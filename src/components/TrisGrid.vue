@@ -257,7 +257,8 @@
 </script>
 
 <style lang="scss" scoped>
-  $border: 10px solid white;
+  $b: 5px solid white;
+  $n: 5px solid transparent;
 
   @keyframes pulse {
     0% { opacity: 0.1; }
@@ -273,6 +274,15 @@
   @keyframes o-animation {
     0% { transform: scale(0); }
     100% { transform: scale(1); }
+  }
+
+  @mixin generateBorder($left, $top, $right, $bottom) {
+    border: {
+      left: $left;
+      top: $top;
+      right: $right;
+      bottom: $bottom;
+    }
   }
 
   .tris-grid {
@@ -298,47 +308,39 @@
       align-items: center;
       
       &.A1 {
-        border: {
-          right: $border;
-          bottom: $border;
-        }
+        @include generateBorder($n, $n, $b, $b);
       }
 
       &.A2 {
-        border-bottom: $border;
+        @include generateBorder($b, $n, $b, $b);
       }
 
       &.A3 {
-        border: {
-          left: $border;
-          bottom: $border;
-        }
+        @include generateBorder($b, $n, $n, $b);
       }
 
       &.B1 {
-        border: {
-          right: $border;
-          bottom: $border;
-        }
+        @include generateBorder($n, $b, $b, $b);
       }
 
       &.B2 {
-        border-bottom: $border;
+        @include generateBorder($b, $b, $b, $b);
       }
 
       &.B3 {
-        border: {
-          left: $border;
-          bottom: $border;
-        }
+        @include generateBorder($b, $b, $n, $b);
       }
 
       &.C1 {
-        border-right: $border;
+        @include generateBorder($n, $b, $b, $n);
+      }
+
+      &.C2 {
+        @include generateBorder($b, $b, $b, $n);
       }
 
       &.C3 {
-        border-left: $border;
+        @include generateBorder($b, $b, $n, $n);
       }
 
       &.empty {
@@ -413,12 +415,12 @@
   @media screen and (max-width: 700px) {
     .X {
       div {
-        height: 10px !important;
+        height: 7px !important;
       }
     }
 
     .O {
-      border: 10px solid white !important;
+      border: 7px solid white !important;
     }
   }
 </style>
